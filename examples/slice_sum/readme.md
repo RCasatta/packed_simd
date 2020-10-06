@@ -12,10 +12,9 @@ RUSTFLAGS="-C target-cpu=native" cargo run --release
 On my machine it prints:
 
 ```
-vertical: 155 ms
-horizontal: 424 ms
+std::iter::sum: 758 ms
+rayon::sum: 67 ms
+vertical: 214 ms
+horizontal: 291 ms
+vertical_par: 60 ms
 ```
-
-that is, on my particular the slice sum algorithm using horizontal vector
-additions operation is ~2.7x slower than the one using vertical vector
-operations.
